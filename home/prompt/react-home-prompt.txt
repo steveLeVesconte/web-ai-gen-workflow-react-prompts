@@ -1,0 +1,138 @@
+# Role
+You are a professional UI/UX designer and React developer tasked with adding new pages and components to an existing Full Stack Developer Portfolio React web application
+
+# Context
+## site map:
+src/
+├── components/
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Layout.tsx
+│   ├── NavBar.tsx
+│   └── SkillsList.tsx
+├── models/
+│   └── Project.ts -  new to be created
+├── pages/
+│   ├── HomoePage.tsx   -  new to be created
+│   └── AboutMePage.tsx
+├── services/
+│   └── ProjectDataService.ts -  new to be created
+├── styles/
+│   ├── styles.css
+│   ├── home.css  
+│   └── aboutMe.css
+├── App.tsx
+└── main.tsx
+
+# Attached Context Files:
+- DesignSystemDocument.md
+- styles.css
+- home.css
+- App.tsx
+
+# Constraints:
+- Reuse existing CSS and JavaScript whenever possible from these files:
+  -- styles.css
+  -- home.css
+- Employ CSS best practices to create, name and reuse CSS variables.
+- Employ best practices to support responsive design.
+- Organize and comment the CSS file to allow you (the AI) and developers to easily apply the styles and CSS variables.
+- Create a new CSS class to cascade over the main element so that the Hero Image can be full width as follows:
+  -- max-width: 1280px;
+
+- When crafting components and pages, follow best practices for:
+  -- file naming 
+  -- variable naming
+  -- function naming
+  -- placement in folders
+
+- Prefer function components instead of class components.
+- Use TypeScript.
+- If more components are needed to complete the HomePage.tsx, create them.
+- Use best and latest practices and conventions when designing the paths for the routes.
+- Assume that the included 'styles.css' and 'home.css' will be the main style source.  If more styles are needed then deliver supplemental stylesheets or a component.css file.
+- Assume that the files you create will be used in an existing Vite React website.
+- Create an aspect-ratio-box for each image to hold space while the image loads.
+  -- aspect-ratio: 9/16
+
+# Home Page Layout:
+- Main Content Aria Contains:
+  -- Page Title (developer name and 'Portfolio')
+  -- Intro Paragraph
+  -- Project Card List with 3 Project Cards
+
+## Project Card List:
+- margin-top: 48px
+- Grid Layout:
+  -- bottom-margin: 48px
+  -- row-gap: 48px
+  -- 1 column
+- Contains Project Cards
+
+## Project Card
+### Desktop Project Card Layout:
+- background-color: #ffffff
+- Responsive breakpoint: 1024px
+- Box shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+- Border radius: 8px
+- Overflow: hidden
+- Grid layout:
+  -- Columns: 3
+  -- Column gap: 0px
+- Card Image: 
+  -- border-radius: 0px
+  -- Box shadow: none
+  -- transition: none
+  -- height: auto
+  -- Placeholder: src="https://picsum.photos/1200/600"
+- Text Section 
+  -- padding: 32px
+  -- contains:
+     --- Project Title
+     --- paragraph
+     --- Button Link: "Learn More"
+- Alternate section placement:
+  -- for odd numbered cards: 
+     --- grid-template-columns: 2fr 1fr;
+     --- Card Image on left 
+         ---- use order:1
+     --- Text Section on right
+         ---- use order:2
+  -- for even numbered cards: 
+     --- grid-template-columns: 1fr 2fr;
+     --- Card Image on right 
+         ---- use order:2
+     --- Text Section on left
+         ---- use order:1
+
+### Mobile Project Card Layout:
+- Grid layout:
+  -- Columns: 1
+  -- Card Image above Text Section
+
+# Data Design
+export interface Project {
+  id: string;
+  title: string;
+  listPageDescription: string;   // used on List Page
+  homePageDescription: string;   // used on Home Page
+  listPageImageUrl: string;      // used on List Page
+  homePageImageUrl: string;      // used on Home Page
+  isFeatured: boolean; // is featured on the Home Page
+  projectDate: Date; // the date the project was completed
+  isHidden: boolean; // is hidden from both the project List Page and the Home Page
+  featureOrder?: number; // the order in which the project appears on the Home Page
+}
+
+#AI Task:
+-  Using the attached context files, create new components for an existing react application for a Home Page that is compatible with the attached DesignSystemDocument.md and styles.css.  
+-  Assume that styles.css and home.css will be included in the React application.
+
+## Deliverables
+At least the following pages and components:
+  -- Project.ts (model)
+  -- ProjectDataService.ts
+  -- ProjectCardList.tsx
+  -- ProjectCard.tsx
+  -- HomePage.tsx
+

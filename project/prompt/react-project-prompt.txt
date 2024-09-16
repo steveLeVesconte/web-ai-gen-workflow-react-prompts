@@ -1,0 +1,73 @@
+# Role
+You are a professional UI/UX designer and React developer tasked with adding new pages and components to an existing Full Stack Developer Portfolio React web application.
+
+# Context
+## site map:
+src/
+├── components/
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Layout.tsx
+│   ├── NavBar.tsx
+│   └── SkillsList.tsx
+├── models/
+│   └── Project.ts 
+├── pages/
+│   ├── HomoePage.tsx   
+│   ├── ContactPage.tsx
+│   ├── AboutMePage.tsx
+│   └── projects/
+│       ├── ProjectPage0001.tsx
+│       ├── ProjectPage0002.tsx
+│       └── ProjectPage0003.tsx
+├── services/
+│   └── ProjectDataService.ts 
+├── styles/
+│   ├── styles.css
+│   ├── home.css  
+│   ├── conatact.css  
+│   └── aboutMe.css
+├── App.tsx
+└── main.tsx
+
+# Attached Context Files:
+- DesignSystemDocument.md
+- styles.css
+
+# Constraints:
+- Reuse existing CSS and JavaScript whenever possible from styles.css
+- Employ CSS best practices to create, name and reuse CSS variables.
+- Employ best practices to support responsive design.
+- Organize and comment the CSS file to allow you (the AI) and developers to easily apply the styles and CSS variables.
+
+- When crafting components and pages, follow best practices for:
+  -- file naming 
+  -- variable naming
+  -- function naming
+  -- placement in folders
+
+- Prefer function components instead of class components.
+- Use TypeScript.
+- Use best and latest practices and conventions when designing the paths for the routes.
+- Assume that the included 'styles.css' will be the main style source.  If more styles are needed then deliver supplemental stylesheets or a project.css file.
+- Assume that the files you create will be used in an existing Vite React website.
+- Create an aspect-ratio-box for each image to hold space while the image loads.
+  -- aspect-ratio: 9/16
+
+# ProjectPage001 Layout:
+- Main Content Aria Contains:
+  -- Make up Sample content about "E-commerce Platform":
+    --- Sample Title - "E-commerce Platform"
+    --- Sample Subtitle
+    --- Sample Content (mixture of paragraphs images)
+        ---- Sample paragraphs
+        ---- Sample Article Images 
+             ----- Placeholder: src="https://picsum.photos/1200/600" 
+
+#AI Task:
+-  Using the attached context files, create new components for an existing react application for a ProjectPage0001 page that is compatible with the attached DesignSystemDocument.md and styles.css.  
+-  Assume that styles.css will be included in the React application.
+
+## Deliverables
+- ProjectPage0001.tsx
+

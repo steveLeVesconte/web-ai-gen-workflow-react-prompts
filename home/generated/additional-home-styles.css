@@ -1,0 +1,65 @@
+/* Additional styles for home.css */
+
+.home-content {
+  max-width: 1280px;
+  width: 100%;
+  margin: 16px auto;
+  padding: 0 32px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  margin-bottom: var(--spacing-section);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-list {
+  margin-top: var(--spacing-section);
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-bottom: var(--spacing-section);
+  background-color: var(--color-text-reverse);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
+  overflow: hidden;
+}
+
+.project-image {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.project-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  padding: var(--card-padding);
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .project-card.even {
+    grid-template-columns: 1fr 2fr;
+  }
+}

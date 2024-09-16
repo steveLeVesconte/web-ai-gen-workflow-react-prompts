@@ -1,0 +1,108 @@
+# Role
+You are a professional UI/UX designer and React developer tasked with adding new pages and components to an existing Full Stack Developer Portfolio React web application.
+
+# Context
+
+## Attached Context Files:
+- DesignSystemDocument.md
+- styles.css
+- ArticleContent.txt
+
+## Article Outline
+### React Go Game for Two Players: A Journey Through Technologies
+
+#### I. Introduction
+   A. Brief overview of the project
+   B. Purpose: Exploring multiple technologies through a rich problem domain
+
+#### II. The Game of Go: A 2,500-Year-Old Challenge
+   A. What is Go?
+   B. Historical significance
+   C. Comparing Go to Chess
+      1. Similarities
+      2. Differences in complexity
+      3. Challenges for computer algorithms
+
+#### III. The React Go Game Project
+   A. Overview of the application
+   B. Key features
+   C. Technologies used
+   D. Visual representation (responsive design examples)
+
+#### IV. Technical Challenges and Learning Opportunities
+   A. Spatial algorithms for scoring
+   B. State management
+   C. Push messaging
+   D. Authorization and authentication
+   E. NoSQL document database
+   F. Responsive web design
+   G. React, TypeScript, and other front-end technologies
+
+#### V. Project Features in Detail
+   A. User authentication and registration
+   B. Game creation and selection
+   C. Gameplay mechanics
+   D. Live chat functionality
+
+#### VI. Future Enhancements
+   A. Features not yet implemented
+   B. Opportunities for continuous improvement
+
+#### VII. The Go Game Project as a Learning Tool
+   A. Benefits of using a complex project for learning
+   B. How this project facilitates deep learning in various technologies
+
+#### VIII. Evolution of the Go Game Project
+   A. Past iterations
+      1. Console versions (C# and Node.js)
+      2. Angular 8 version
+      3. ASP.NET versions
+   B. Future plans
+      1. AWS serverless architecture
+      2. Containerization
+      3. React Native version
+      4. AI opponent integration
+
+#### IX. Conclusion
+   A. Recap of the project's educational value
+   B. Invitation to try the game
+   C. Link to GitHub repository for further exploration
+
+#### X. Additional Resources
+   A. Go game tutorials for beginners
+   B. Links to relevant documentation for technologies used
+
+# Constraints:
+- Reuse existing CSS and JavaScript whenever possible from styles.css
+- Employ CSS best practices to create, name and reuse CSS variables.
+- Employ best practices to support responsive design.
+- Organize and comment the CSS file to allow you (the AI) and developers to easily apply the styles and CSS variables.
+
+- When crafting components and pages, follow best practices for:
+  -- file naming 
+  -- variable naming
+  -- function naming
+  -- placement in folders
+
+- Prefer function components instead of class components.
+- Use TypeScript.
+- Use best and latest practices and conventions when designing the paths for the routes.
+- Assume that the included 'styles.css' will be the main style source.  If more styles are needed then deliver supplemental stylesheets or a project.css file.
+- Assume that the files you create will be used in an existing Vite React website.
+- Create an aspect-ratio-box for each image to hold space while the image loads.
+  -- aspect-ratio: 9/16
+
+# ProjectPage002 Layout:
+- Main Content Aria Contains:
+  -- Make up Sample content about "React Go Game for Two Players":
+
+
+# AI Task:
+-  Using the attached context files, create new components for an existing react application for a ProjectPage0002 page that is compatible with the attached DesignSystemDocument.md and styles.css.  
+-  Using the Article Outline, and the attached ArticleContent.txt, generate the article contents.
+-  Suggest images to include in the Article Images to include at various points in the text.  Use a placeholder: src="https://picsum.photos/1200/600" 
+-  Assume that styles.css will be included in the React application.
+
+## Deliverables
+- ProjectPage0002.tsx
+

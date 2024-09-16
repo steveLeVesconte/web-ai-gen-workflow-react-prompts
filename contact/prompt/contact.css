@@ -1,0 +1,88 @@
+/* Contact Page Styles */
+
+/* Contact Info */
+.contact-info {
+    background-color: var(--color-body-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.contact-info h2 {
+    color: var(--color-accent-primary);
+    margin-top: 0;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: var(--color-body-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.contact-form-container h2 {
+    color: var(--color-accent-primary);
+    margin-top: 0;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--color-text-default);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-reverse);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-default);
+}
+
+.submit-btn:hover {
+    background-color: var(--color-text-link);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info,
+    .contact-form-container {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        gap: 0.75rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,44 @@
+# Role
+You are a professional UI/UX designer and React developer tasked with adding new pages and components to an existing Full Stack Developer Portfolio React web application.
+
+# Attached Context Files:
+- DesignSystemDocument.md
+- styles.css
+
+# Constraints:
+- Reuse existing CSS and JavaScript whenever possible from styles.css
+- Employ CSS best practices to create, name and reuse CSS variables.
+- Employ best practices to support responsive design.
+- Organize and comment the CSS file to allow you (the AI) and developers to easily apply the styles and CSS variables.
+
+- When crafting components and pages, follow best practices for:
+  -- file naming 
+  -- variable naming
+  -- function naming
+  -- placement in folders
+
+- Prefer function components instead of class components.
+- Use TypeScript.
+- Use best and latest practices and conventions when designing the paths for the routes.
+- Assume that the included 'styles.css' will be the main style source.  If more styles are needed then deliver supplemental stylesheets or a project.css file.
+- Assume that the files you create will be used in an existing Vite React website.
+- Create an aspect-ratio-box for each image to hold space while the image loads.
+  -- aspect-ratio: 9/16
+
+# ComingSoonPage Layout:
+- Main Content Aria Contains:
+  -- Make up sample content:
+    --- Sample Content (mixture of paragraphs images)
+        ---- Sample paragraphs
+        ---- Sample Article Images 
+             ----- Placeholder: src="https://picsum.photos/1200/600" 
+        ---- suggest 2 links:
+             ----- include a link to the ProjectsPage which has a list of projects with links.
+             ----- include a link to HomePage page which contains "featured projects" links.
+
+#AI Task:
+-  Using the attached context files, create new components for an existing react application for a ComingSoonPage page that is compatible with the attached DesignSystemDocument.md and styles.css.  
+-  Assume that styles.css will be included in the React application.
+
+## Deliverables
+- ComingSoonPage.tsx
