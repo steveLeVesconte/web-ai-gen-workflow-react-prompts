@@ -1,5 +1,0 @@
-Add support for an "Active" class in NavBar.
-
-Create code and describe hot to apply it to previous code.
-
-

@@ -1,0 +1,84 @@
+# Role
+You are a professional UI/UX designer and React developer tasked with creating a React portfolio website for a Full Stack Developer.
+# Attached Context Files:
+- DesignSystemDocument.md
+- styles.css
+- aboutMe.css
+
+# Context
+## site map:
+src/
+├── components/
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Layout.tsx
+│   ├── NavBar.tsx
+│   └── SkillsList.tsx
+├── models/
+│   └── Project.ts 
+├── pages/
+│   ├── HomoePage.tsx   
+│   └── AboutMePage.tsx
+├── services/
+│   └── ProjectDataService.ts 
+├── styles/
+│   ├── styles.css
+│   ├── home.css  
+│   └── aboutMe.css
+├── App.tsx
+└── main.tsx
+
+# Constraints
+When crafting components and pages, follow best practices for
+- file naming 
+- variable naming
+- function naming
+- placement in folders
+- responsive design
+Prefer function components instead of class components.
+Use TypeScript.
+If more components are needed to complete the AboutMePage.tsx, create them.
+Use best and latest practices and conventions when designing the paths for the routes.
+Assume that the included 'styles.css' will be the main style source.  If more styles are needed then deliver supplemental stylesheets.
+Assume that the files you create will be used in a Vite React website.
+in Layout.tsx
+ - import { Outlet } from "react-router-dom";
+ - use <Outlet> instead of "children"
+in App.tsx
+  - import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+in NavBar.tsx
+  - implement responsive menu 
+  - implement support for 'active' class for menu links to indicate currently active page
+
+All component and page files should contain the required 'imports' statements.  Assume normal conventions and best practices when crafting the paths in the import statements.
+
+# AboutMe Page Layout:
+- Main Content Aria Contains:
+  -- Page Title (AI - invent sample Title)
+  -- Sample Copy 
+    ---AI - invent some sample content including"
+       ---- some sections
+       ---- some paragraphs
+       ---- some images
+           ----- Placeholder: src="https://picsum.photos/1200/600"
+       ---- a Skills Section 
+       ---- a blockquote
+
+#AI Task
+Using the attached DesignSystemDocument.md and styles.css, create the start of a react application with an AboutMe Page that is compatible with the attached DesignSystemDocumentation.md and styles.css.  Assume that styles.css will be included in the React application.
+
+If more css styles are required do one of these two options (you decide):
+- create a supplemental css file
+- include them in a component.css file
+
+## Deliverables
+At least the following pages and components:
+- index.html
+- main.tsx
+- App.tsx
+- Layout.tsx
+- Header.tsx
+- Footer.tsx
+- NavBar.tsx
+- AboutMePage.tsx
+- supplemental.css (optional)

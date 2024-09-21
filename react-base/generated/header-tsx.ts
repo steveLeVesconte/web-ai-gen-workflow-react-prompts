@@ -1,14 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
+import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 const Header: React.FC = () => {
   return (
     <header>
       <div className="header-content">
-        <Link to="/" className="brand-title">
-          John Doe
-        </Link>
+        <Link to="/" className="brand-title">John Doe</Link>
         <NavBar />
       </div>
     </header>
