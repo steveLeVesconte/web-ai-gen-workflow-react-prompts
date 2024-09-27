@@ -2,10 +2,14 @@
 You are a professional UI/UX designer and React developer tasked with adding new pages and components to an existing Full Stack Developer Portfolio React web application
 
 # Context
+## Developer Name:
+- John Doe
 ## site map:
 src/
 ├── components/
 │   ├── Footer.tsx
+│   ├── ProjectList.tsx  - new to be created
+│   ├── ProjectRow.tsx   - new to be created
 │   ├── Header.tsx
 │   ├── Layout.tsx
 │   ├── NavBar.tsx
@@ -13,12 +17,18 @@ src/
 ├── models/
 │   └── Project.ts 
 ├── pages/
-│   ├── HomoePage.tsx  
+│   ├── HomePage.tsx  
 │   ├── ContactPage.tsx  
-│   ├── ProjectsPage.tsx   -  new to be created
-│   └── AboutMePage.tsx
+│   ├── ProjectListPage.tsx   -  new to be created
+│   ├── ProjectContainerPage.tsx   -  new to be created
+│   ├── AboutMePage.tsx
+│   └── /projects  
+│         ├── ProjectPage0001.tsx  - for reference
+│         ├── ProjectPage0002.tsx  - for reference
+│         ├── ProjectPage0003.tsx  - for reference
+│         └── ProjectPage0004.tsx  - for reference
 ├── services/
-│   └── ProjectDataService.ts 
+│   └── ProjectDataService.ts  - to be updated
 ├── styles/
 │   ├── styles.css
 │   ├── home.css  
@@ -29,7 +39,6 @@ src/
 # Attached Context Files:
 - DesignSystemDocument.md
 - styles.css
-- projects.css
 - App.tsx
 - ProjectDataService
 
@@ -51,17 +60,17 @@ src/
 
 - Prefer function components instead of class components.
 - Use TypeScript.
-- If more components are needed to complete the ProjectsPage.tsx, create them.
+- If more components are needed to complete the ProjectListPage.tsx, create them.
 - Use best and latest practices and conventions when designing the paths for the routes.
 - Assume that the included 'styles.css' and 'projects.css' will be the main style source.  If more styles are needed then deliver supplemental stylesheets or a component.css file.
 - Assume that the files you create will be used in an existing Vite React website.
 - Create an aspect-ratio-box for each image to hold space while the image loads.
-  -- aspect-ratio: 1/1
+  -- aspect-ratio: 16/9
 
-# Projects Page Layout:
-- Page Title (developer name and 'Portfolio')
+# ProjectListPage Layout:
+- Page Title 
 - Intro Paragraph
-- Project List  (show 6 projects to start) (ProjectList.tsx)
+- ProjectList Component  (show 6 projects to start) (ProjectList.tsx)
   -- row:  (ProjectRow.tsx)
       --- height: 350px
       --- Text Section (on left):
@@ -72,14 +81,30 @@ src/
           ---- button Link: "Learn More"
       --- Image (on right)
             ---- Placeholder: src="https://picsum.photos/600/600" "
-- button (add next 6 projects to the bottom of list)
+- Show More button 
   -- centered
   -- Text: Show More
   -- margin-bottom: 32px
+  -- causes next 6 projects to be appended to bottom of list
+
+# ProjectContainerPage Layout:
+ - suspense
+   -- ProjectPage Component (lazy loaded)
+  - button row
+    -- next button on right
+    -- previouse botton on left
+
+# ProjectContainerPage Logic
+- provide logic to convert an id parameter into a project component name:
+  -- Exaple project component names:
+     --- ProjectPage0001
+     --- ProjectPage0002
+- provide logic for next and previous buttons
+- return a lazy laoaded ProjectPage Component as shown in layout
 
 # Data Design
 export interface Project {
-  id: string;
+  id: string;  
   title: string;
   listPageDescription: string;   // used on Projects Page
   homePageDescription: string;   // used on Home Page
@@ -92,20 +117,24 @@ export interface Project {
 }
 
 #AI Task:
--  Using the attached context files, create new components for an existing react application for a Projects Page that is compatible with the attached DesignSystemDocument.md and styles.css.  
--  Assume that styles.css and projects.css will be included in the React application.
--  Update ProjectDataService.ts 
-   -- add paged method for reteiving projects
+-  Using the attached context files, create new components for an existing react application for a ProjectListPage that is compatible with the attached DesignSystemDocument.md and styles.css.  
+-  Update ProjectDataService.ts: 
+   -- add paged method for reteiving projects:
       --- first 6  - (on load)
-      --- next 6  - (on button click)
+      --- next 6  - (on Show More button click)
       --- filter to exclude "isHidden"
       --- order by "featureOrder"
-    add more items to 'projects' array (must be at least 12 items)
+    -- add more items to 'projects' array (must be at least 12 items)
+-  Create a ProjectContainerPage: 
+   -- convert an id parameter to a ProjectPage name 
+   -- return a lazy loaded ProjectPage
 
 ## Deliverables
 At least the following pages and components:
-  -- ProjectsPage.tsx
+  -- ProjectListPage.tsx
   -- ProjectList.tsx
   -- ProjectRow.tsx
-  -- App.tsx (with updated route)
-  -- ProjectDataService.ts
+  -- ProjectContanerPage.tsx
+  -- App.tsx (with updated route id => ProjectContanerPage )
+  -- ProjectDataService.ts  (updated)
+  -- Projects.css 

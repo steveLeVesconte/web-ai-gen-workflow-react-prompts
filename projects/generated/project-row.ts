@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Project } from '../models/Project';
 
 interface ProjectRowProps {
@@ -8,11 +9,13 @@ interface ProjectRowProps {
 const ProjectRow: React.FC<ProjectRowProps> = ({ project }) => {
   return (
     <div className="project-row">
-      <div className="project-text">
-        <h3>{project.title}</h3>
+      <div className="project-info">
+        <h2>{project.title}</h2>
         <p className="project-date">{project.projectDate.toLocaleDateString()}</p>
-        <p>{project.listPageDescription}</p>
-        <a href={`/project/${project.id}`} className="button">Learn More</a>
+        <p className="project-description">{project.listPageDescription}</p>
+        <Link to={`/project/${project.id}`} className="learn-more-button">
+          Learn More
+        </Link>
       </div>
       <div className="project-image">
         <div className="aspect-ratio-box">

@@ -1,0 +1,108 @@
+.project-list-page {
+  padding: 2rem 0;
+}
+
+.intro-paragraph {
+  margin-bottom: 2rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-row {
+  display: flex;
+  gap: 2rem;
+  height: 350px;
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-date {
+  color: var(--color-byline);
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  flex-grow: 1;
+}
+
+.learn-more-button {
+  align-self: flex-start;
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-reverse);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color var(--transition-default);
+}
+
+.learn-more-button:hover {
+  background-color: var(--color-accent-secondary);
+}
+
+.show-more-button {
+  display: block;
+  margin: 2rem auto;
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-reverse);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-default);
+}
+
+.show-more-button:hover {
+  background-color: var(--color-accent-secondary);
+}
+
+.project-container {
+  padding: 2rem 0;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.navigation-buttons button {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-reverse);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-default);
+}
+
+.navigation-buttons button:hover:not(:disabled) {
+  background-color: var(--color-accent-secondary);
+}
+
+.navigation-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-image {
+    order: -1;
+  }
+}
